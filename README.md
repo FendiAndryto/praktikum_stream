@@ -51,3 +51,21 @@
 - `initState()` menginisialisasi stream dan mendaftarkan listener untuk menangani data yang diterima dari stream. Jika data diterima dengan sukses, UI akan diperbarui dengan nilai tersebut. Namun, jika error terjadi, UI akan menampilkan nilai -1 (sebagai tanda error).
 
 - `addRandomNumber()` (meskipun seharusnya menghasilkan angka acak) justru menambahkan error ke dalam stream, yang kemudian akan diproses oleh handler onError di initState(). Ketika error ditambahkan ke dalam stream, listener akan menangani error tersebut dengan mengubah nilai lastNumber menjadi -1.
+
+---
+
+## Soal 8 
+
+### Caputer Hasil
+
+![Capture Hasil Praktikum Soal 2](./assets/soal8.gif)
+
+### Penjelasan `Langkah 1 sampai 3`
+
+Code dari `Lankah 1 sampai 3` mendeklarasikan sebuah `StreamTransformer` yang mengubah data dalam `stream`. `Transformer` ini memiliki tiga bagian: `handleData`, yang mengalikan setiap nilai data dengan 10 sebelum diteruskan; `handleError`, yang menangani error dengan mengirimkan nilai -1 jika terjadi masalah; dan `handleDone`, yang menutup `stream` setelah selesai. `Stream` yang telah diproses oleh `transformer` kemudian didengarkan menggunakan metode `listen().` Jika ada data yang diterima, UI diperbarui dengan nilai tersebut, dan jika terjadi error, nilai -1 ditampilkan di UI. Fungsi `super.initState()` memastikan bahwa fungsionalitas lainnya dalam `initState` tetap dijalankan dengan benar.
+
+
+
+
+
+
