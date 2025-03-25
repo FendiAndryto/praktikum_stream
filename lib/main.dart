@@ -67,6 +67,10 @@ class _StreamHomePageState extends State<StreamHomePage> {
       setState(() {
         lastNumber = event;
       });
+    }).onError((error) {
+      setState(() {
+        lastNumber = -1;
+      });
     });
     super.initState();
   }
@@ -79,8 +83,9 @@ class _StreamHomePageState extends State<StreamHomePage> {
 
   void addRandomNumber() {
     Random random = Random();
-    int myNum = random.nextInt(10); // Random number between 0 and 9
-    numberStream.addNumberToSink(myNum); // Adding the number to the stream sink
+    int myNum = random.nextInt(10);
+    numberStream.addNumberToSink(myNum);
+    // numberStream.addError();
   }
 
   @override
