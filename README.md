@@ -80,6 +80,22 @@ Code dari `Lankah 1 sampai 3` mendeklarasikan sebuah `StreamTransformer` yang me
 
 - `addRandomNumber()` menghasilkan angka acak dan mengirimkannya ke stream, kecuali jika stream sudah ditutup.
 
+---
+
+## Soal 10
+
+### Penjelasan Code Error
+
+- error pada kode tersebut adalah karena deklarasi variabel yang duplikat. Variabel subscription2 dan values dideklarasikan dua kali, yang menyebabkan sintaks error. Setiap variabel hanya perlu dideklarasikan sekali dalam satu scope.
+
+---
+
+## Soal 11
+
+### Capture Hasil
+
+![Capture Hasil Praktikum Soal 2](./assets/soal11.png)
+
 
 
 
