@@ -64,6 +64,21 @@
 
 Code dari `Lankah 1 sampai 3` mendeklarasikan sebuah `StreamTransformer` yang mengubah data dalam `stream`. `Transformer` ini memiliki tiga bagian: `handleData`, yang mengalikan setiap nilai data dengan 10 sebelum diteruskan; `handleError`, yang menangani error dengan mengirimkan nilai -1 jika terjadi masalah; dan `handleDone`, yang menutup `stream` setelah selesai. `Stream` yang telah diproses oleh `transformer` kemudian didengarkan menggunakan metode `listen().` Jika ada data yang diterima, UI diperbarui dengan nilai tersebut, dan jika terjadi error, nilai -1 ditampilkan di UI. Fungsi `super.initState()` memastikan bahwa fungsionalitas lainnya dalam `initState` tetap dijalankan dengan benar.
 
+---
+
+## Soal 9
+
+### Capture Hasil
+
+![Capture Hasil Praktikum Soal 2](./assets/soal9.png)
+
+### Penjelasan `Langkah 2, 6 dan 8`
+
+- `initState()` digunakan untuk menginisialisasi dan mulai mendengarkan stream.
+
+- `subscription.cancel();` digunakan untuk menghentikan langganan dari stream.
+
+- `addRandomNumber()` menghasilkan angka acak dan mengirimkannya ke stream, kecuali jika stream sudah ditutup.
 
 
 
